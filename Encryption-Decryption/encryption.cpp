@@ -2,7 +2,7 @@
 #include <cstring>
 using namespace std;
 
-char encryption_dat[] = {'2','7','8','v','a','g','b','h','&','$','l','z','k','p','r','j','k','r','d','#','4','q','w','e','r','t'};
+char encryption_dat[] = {'2','7','8','v','a','g','b','h','&','$','l','z','k','p','r','j','k','-','d','#','4','q','w','e',')','t'};
 char decryption_dat[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 
 const int MAXIMUM_SIZE = sizeof(decryption_dat);
@@ -13,7 +13,7 @@ int index(char arr[], char x)
     {
         if(arr[i] == x)
         {
-            return i;
+            return i; 
         }
     }
     return -1;
@@ -55,10 +55,11 @@ int main ()
 {
     cout << "Current size of array is: " << MAXIMUM_SIZE << endl;
 
-    string str="ab";
+    string str=""; //enter the string you'd like to encrypt
     cout << "\n Intial: " << str << endl;
     str = encryption(str);
     cout << "\n Encryption: " << str << endl;
+    str = decryption(str);
     cout << "\n Decryption: " << str << endl;
 
     return 0;
